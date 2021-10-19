@@ -1,6 +1,6 @@
 import { translateCode, decodeString, MIN_NUMBER, MAX_NUMBER } from "../main.js";
 
-describe("translateCode", () => {
+describe("Code translation", () => {
   it(`Returns an error code when receiving a number that's out of range`, () => {
     const funct = () => translateCode(10);
 
@@ -13,7 +13,7 @@ describe("translateCode", () => {
   });
 });
 
-describe("decodeString", () => {
+describe("Inner translation function", () => {
   it(`returns the translated code "bed" when receiving 147`, () => {
     const translation = decodeString(147);
 
@@ -33,7 +33,7 @@ describe("decodeString", () => {
   });
 });
 
-describe("correct formatting in the returning solution", () => {
+describe("Correct formatting in the returning solution", () => {
   let randomCode;
   beforeEach(() => {
     randomCode = Math.floor(Math.random() * (MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER);
