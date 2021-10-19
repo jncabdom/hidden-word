@@ -1,5 +1,5 @@
-const MIN_NUMBER = 100;
-const MAX_NUMBER = 999999;
+export const MIN_NUMBER = 100;
+export const MAX_NUMBER = 999999;
 
 const BASE_STRING = "oblietadnm";
 
@@ -11,7 +11,7 @@ export const translateCode = (numberCode) => {
   return decodeString(numberCode.toString());
 }
 
-const decodeString = (numberCode) => {
+export const decodeString = (numberCode) => {
   let result = '';
   numberCode = numberCode.toString();
 
